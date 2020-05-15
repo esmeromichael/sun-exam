@@ -54,7 +54,6 @@
                     <label class="control-label password-text"></label>
                 </div>
               </div>
-
               <div class="row">
                 <div class="col-md-4">
                   <div class="form-group">
@@ -68,7 +67,7 @@
       	 	</form>
       	</div>
       	<div class="modal-footer">
-      	  <button type="button" class="btn btn-default post-btn">Save</button>
+      	  <button type="button" class="btn btn-default post-btn">Post</button>
       	</div>
     </div>
 

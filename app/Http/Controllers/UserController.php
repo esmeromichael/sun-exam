@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Hash;
+use Session;
 
 class UserController extends Controller
 {
@@ -86,8 +88,23 @@ class UserController extends Controller
     	return response()->json(array('success' => true, 'result'=> $user));
     }
 
-    public function login()
+    public function login(Request $request)
     {
-    	
+    	$email = $request->email;
+    	$password = $request->password;
+
+    	$auth    = User::where('email', $email)->first();
+    	if($auth){
+    		if (Hash::check($password, $auth->password)){
+    			Session::put('username', $auth->name);
+    			Session::save();
+
+    			return response()->json(array('success' => false, 'message'=> 'Successfully login.'));
+    		} else {
+    			return response()->json(array('success' => false, 'message'=> 'Undefined password.'));
+    		}
+    	} else {
+    		return response()->json(array('success' => false, 'message'=> 'Username is undefined.'));
+    	}
     }
 }

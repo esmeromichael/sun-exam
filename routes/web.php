@@ -22,4 +22,4 @@ Route::post('/create', 'UserController@create');
 Route::get('/delete', 'UserController@destroy');
 Route::get('/validate-email', 'UserController@validateEmail');
 
-Route::get('/login', 'UserController@login');
+Route::post('/login', 'UserController@login');

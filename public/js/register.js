@@ -107,10 +107,10 @@ $(document).ready(function(me){
         });
     })
 
-    $('.login-btn').on('click', function(){
+    $('.loginbtn').on('click', function(){
 
-        var email = $('.email');
-        var password = $('.password');
+        var email = $('.logemail');
+        var password = $('.logpassword');
 
          if(!email.val()) {
             alert('Please fill up email');
@@ -130,7 +130,7 @@ $(document).ready(function(me){
                 {
                     alert(data.message)
                 } else {
-                    alert('Unable to login.')
+                    alert(data.message)
                 }
             },
             complete: function() {

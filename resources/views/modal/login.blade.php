@@ -18,7 +18,7 @@
 	      	 			<div class="col-md-4">
 	      	 				<div class="form-group">
 	      	 					<label class="control-label">Email Address</label>
-	      	 					<input type="email" class="form-control email" name="email" value="">
+	      	 					<input type="email" class="form-control logemail" name="email" value="">
 	      	 				</div>
 	      	 			</div>
 	      	 		</div>
@@ -27,7 +27,7 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     <label class="control-label">Password</label>
-                    <input type="text" class="form-control password" name="password" value="">
+                    <input type="text" class="form-control logpassword" name="password" value="">
                   </div>
                 </div>
               </div>
@@ -35,7 +35,7 @@
       	 	</form>
       	</div>
       	<div class="modal-footer">
-      	  <button type="button" class="btn btn-default post-btn">Login</button>
+      	  <button type="button" class="btn btn-default loginbtn">Login</button>
       	</div>
     </div>
 
