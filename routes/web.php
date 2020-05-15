@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', 'ArticleController@index');
-Route::post('/create', 'ArticleController@create');
-Route::get('/delete', 'ArticleController@destroy');
+Route::get('/', 'UserController@index');
+Route::post('/create', 'UserController@create');
+Route::get('/delete', 'UserController@destroy');
+Route::get('/validate-email', 'UserController@validateEmail');
+
+Route::get('/login', 'UserController@login');

@@ -68,18 +68,14 @@
     <body>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-                <div class="navbar-header" style="display: none;">
-                  <a class="navbar-brand" href="#">WebSiteName</a>
+                <div class="navbar-header" >
+                  <a class="navbar-brand" href="#">Exam</a>
                 </div>
-                <ul class="nav navbar-nav" style="display: none;">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Page 1</a></li>
-                  <li><a href="#">Page 2</a></li>
-                  <li><a href="#">Page 3</a></li>
+                <ul class="nav navbar-nav right">
+                  <li class="active"><a href="#" id="create-btn" data-toggle="modal" data-target="#create-register">Register</a></li>
+                  <li><a href="#" id="login-btn" data-toggle="modal" data-target="#login">Login</a></li>
                 </ul>
-                <div>
-                    <button type="button" class="btn btn-default" id="create-btn" data-toggle="modal" data-target="#create-article">Create New Article</button>
-                </div>
+                
             </div>
         </nav>
 
@@ -106,25 +102,12 @@
 
             <div class="content">
 
-                <!-- <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div> -->
+                
             </div>
         </div>
     </body>
     @include('modal.create')
-    @include('modal.votes')
+    @include('modal.login')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/js/article.js"></script>
+    <script src="/js/register.js"></script>
 </html>

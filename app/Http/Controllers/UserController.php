@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Article;
+use App\User;
 
-class ArticleController extends Controller
+class UserController extends Controller
 {
-
-	public function index(Request $request)
+    public function index(Request $request)
 	{
-		$lists = Article::orderBy('title','asc')->paginate(10);
+		$lists = User::orderBy('name','asc')->paginate(10);
 
 		if($request->ajax())
 		{
@@ -24,7 +23,7 @@ class ArticleController extends Controller
     {
     	if($request->data_action == "add"){
 
-    		$create = new Article;
+    		$create = new User;
 	    	$this->RequestToSave($create,$request);
 	    	$create->save();
 
@@ -37,8 +36,11 @@ class ArticleController extends Controller
 
     		$id = $request->article_id;
 
-    		$update = Article::find($id);
+    		$update = User::find($id);
     		$this->RequestToSave($update,$request);
+    		if($request->password){
+    			$update->password = bcrypt($request->password);
+    		}
     		$update->save();
 
     		if($update){
@@ -52,20 +54,40 @@ class ArticleController extends Controller
 
     public function RequestToSave($create,$request)
     {
-    	$create->title   = $request->article_title;
-	    $create->content = $request->article_content;
+    	$create->name  = $request->name;
+	    $create->email = $request->email;
+	    $create->password = bcrypt($request->password);
     }
 
     public function destroy(Request $request)
     {
-    	$article = Article::find($request->id);
+    	$article = User::find($request->id);
 
     	if($article) {
-    		Article::where('id',$request->id)->delete();
+    		User::where('id',$request->id)->delete();
 
     		return response()->json(array('success' => true, 'message'=> 'Successfully deleted.'));
     	} else {
     		return response()->json(array('success' => true, 'message'=> 'Nothing to delete.'));
     	}
+    }
+
+    public function validateEmail(Request $request)
+    {
+    	$email = $request->email;
+    	$user = 0;
+
+    	$profile = User::where('email',$email)->first();
+
+    	if($profile){
+    		$user++;
+    	}
+
+    	return response()->json(array('success' => true, 'result'=> $user));
+    }
+
+    public function login()
+    {
+    	
     }
 }
