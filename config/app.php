@@ -55,7 +55,7 @@ return [
     'url' => env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL', null),
-
+    
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -66,9 +66,9 @@ return [
     | ahead and set this to a sensible default for you out of the box.
     |
     */
-
-    'timezone' => 'UTC',
-
+    
+    'timezone' => 'Asia/Manila',
+    
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration

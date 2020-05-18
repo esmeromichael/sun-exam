@@ -13,13 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', 'UserController@index');
-Route::post('/create', 'UserController@create');
-Route::get('/delete', 'UserController@destroy');
-Route::get('/validate-email', 'UserController@validateEmail');
+Route::get('/logout', 'UserController@logout');
 
-Route::post('/login', 'UserController@login');
+Route::group(
+[
+    'prefix' => 'user',
+    'as' => 'user.'
+], function ()
+{
+	Route::get('/', 'UserController@index');
+	Route::post('/create', 'UserController@create');
+	Route::get('/delete', 'UserController@destroy');
+	Route::get('/validate-email', 'UserController@validateEmail');
+
+	Route::post('/login', 'UserController@login');
+
+	Route::post('/upload-img', 'UserController@upload');
+	Route::get('/locked-account', 'UserController@lockedAccount');
+});
+
+
+

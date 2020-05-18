@@ -27,7 +27,7 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     <label class="control-label">Password</label>
-                    <input type="text" class="form-control logpassword" name="password" value="">
+                    <input type="password" class="form-control logpassword" name="password" value="">
                   </div>
                 </div>
               </div>

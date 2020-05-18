@@ -1,5 +1,5 @@
 <div id="create-register" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
 
     <!-- Modal content-->
     <div class="modal-content">
@@ -13,55 +13,70 @@
       	 		<input type="hidden" class="data_action" name="data_action" value="add">
       	 		<input type="hidden" class="user-id" name="article_id" value="">
       	 		<div class="container">
-      	 			<div class="row">
-	      	 			<div class="col-md-4">
-	      	 				<div class="form-group">
-	      	 					<label class="control-label">Name</label>
-	      	 					<input type="text" class="form-control name" name="name" value="">
-	      	 				</div>
-	      	 			</div>
-      	 			</div>
-      	 			<div class="row">
-	      	 			<div class="col-md-4">
-	      	 				<div class="form-group">
-	      	 					<label class="control-label">Email Address</label>
-	      	 					<input type="email" class="form-control email" name="email" value="">
-	      	 				</div>
-	      	 			</div>
-	      	 		</div>
-
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label class="control-label">Password</label>
-                    <input type="text" class="form-control password" name="password" value="">
+              <div class="col-lg-5">
+                  <div class="row">
+                    <div class="col-md-10">
+                      <div class="form-group">
+                        <label class="control-label">Name</label>
+                        <input type="text" class="form-control name" name="name" value="">
+                      </div>
+                    </div>
                   </div>
+                  <div class="row">
+                    <div class="col-md-10">
+                      <div class="form-group">
+                        <label class="control-label">Email Address</label>
+                        <input type="email" class="form-control email" name="email" value="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-10">
+                      <div class="form-group">
+                        <label class="control-label">Password</label>
+                        <input type="password" class="form-control password" name="password" value="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-10">
+                      <div class="form-group">
+                        <label class="control-label">Repeat Password</label>
+                        <input type="password" class="form-control repeat-password" name="repeat_password" value="">
+                      </div>
+                    </div>
+                    
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-10">
+                        <label class="control-label password-text"></label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-10">
+                      <div class="form-group">
+                        <label class="control-label">Terms and Condition</label>
+                        <input type="checkbox" class="terms" name="terms" value="">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+      	 			<div class="col-lg-4">
+                <div class="" >
+                    <div class="card card-chart img-div" >
+                        <div class="card-body">
+                            <div id="image_placeholder">
+                            </div>
+                        </div>
+                    </div>
+                    <img class="forImage_variance lg-avatar" src="">
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label class="control-label">Repeat Password</label>
-                    <input type="text" class="form-control repeat-password" name="repeat_password" value="">
-                  </div>
-                </div>
-                
-              </div>
-
-              <div class="row">
-                <div class="col-md-4">
-                    <label class="control-label password-text"></label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label class="control-label">Terms and Condition</label>
-                    <input type="checkbox" class="terms" name="terms" value="">
-                  </div>
-                </div>
-              </div>
+              
 
       	 		</div>
       	 	</form>
